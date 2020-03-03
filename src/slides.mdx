@@ -1,0 +1,137 @@
+import Test from './test-component';
+import Logo from './Logo';
+import Preview from './Preview';
+import { LiveProvider, LiveEditor, LiveError, LivePreview } from 'react-live';
+
+# Cours Web/JavaScript/React
+
+
+#### 2eme année du Bachelor Sciences du Numérique.
+
+<Logo />
+
+---
+
+## React
+
+> Une bibliothèque JavaScript pour créer des interfaces utilisateurs
+
+Notes: React utilisa la syntax JSX. JSX produit le virtual dom.
+Syntax proche mais differerente de de l'html.
+Virtual DOM utilisé pour les perf.
+mais surtout reutilisation de composant.
+on creer un arbre de composant pour créer notre application
+
+---
+
+# JSX et l'approche Composant
+
+```JS
+import React from 'react';
+import { render } from 'react-dom';
+
+const Welcome = () => <h1>Welcome</h1>
+
+render(<Welcome />, document.getElementById('root'))
+
+
+```
+
+---
+# Description du projet
+
+Reprise de la créaction du clone de https://www.pokemon.com/us/pokedex/charmeleon
+
+à partir de https://github.com/gus3000/pokedex
+
+
+---
+# getting started
+
+> git clone https://github.com/gus3000/pokedex
+
+> cd pokedex
+
+> npm install
+
+> npm run dbcreate
+
+> npm start
+
+---
+# Creation d'une API
+
+ - /api/pokemon
+
+ - /api/pokemon/:pokemon
+
+ - Bonus: Gestion correct de la pagination
+
+---
+
+# creation du project frontend
+
+> npx create-react-app pokedex-front
+
+> cd pokedex-front && npm start
+
+---
+# Analyse du squelette crée
+
+---
+# Creation de la page pokemon
+
+- créer un dossier pages dans src/
+- créer un fichier Pokemon.js dans /src/pages
+- En s'inspirant de App.js créer un composant minimalist dans Pokemon.js et l'exporter
+---
+# Pokemon.js
+
+```JavaScript
+import React from 'react'
+
+import PokemonPage = () => <div>Hello</div>
+
+export default PokemonPage
+
+```
+
+---
+# Utiliser un composant
+
+- dans App.js importer le componsant Pokemon.JS
+- Modifier le template jsx dans App.js pour utiliser le composant
+
+---
+# Objectif de l'etape 1
+
+<Preview />
+
+- dans App.js importer le componsant Pokemon.JS
+- Modifier le template jsx dans App.js pour utiliser le composant
+
+
+---
+# Aller vers l'etape 1
+
+- récupérer un json avec les data du Pokemon et les sauvegarder dans le projet
+- en s'aider du ficher views correspondant, créer et utiliser les componsants suivants
+    - PokemonTitle
+    - PokemonImage
+    - PokemonDescription
+    - PokemonMiscInfo
+- Faire en sorte que l'affichage soit identique à celui du server
+
+
+---
+# Objectif etape 2
+
+- finir l'affichage de l'ecran
+- Refactorer pour avoir un seul composant par fichier
+- lire dynamiquement le contenue du serveur
+- corriger le soucis de CORS
+
+
+
+
+ 
